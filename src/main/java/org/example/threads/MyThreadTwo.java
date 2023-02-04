@@ -1,4 +1,4 @@
-package org.example.theards;
+package org.example.threads;
 
 public class MyThreadTwo {
 }

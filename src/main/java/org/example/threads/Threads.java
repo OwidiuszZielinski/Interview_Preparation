@@ -1,4 +1,4 @@
-package org.example.theards;
+package org.example.threads;
 
 import java.util.Random;
 
