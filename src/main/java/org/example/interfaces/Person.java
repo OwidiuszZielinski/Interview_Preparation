@@ -2,7 +2,7 @@ package org.example.interfaces;
 
 import java.io.Serializable;
 
-public class Person implements Comparable<Person>,Runnable, Serializable {
+public class Person implements  Comparable<Person>,Runnable, Serializable,Logger {
     public String getName() {
         return name;
     }
@@ -21,6 +21,11 @@ public class Person implements Comparable<Person>,Runnable, Serializable {
 
     @Override
     public void run() {
+
+    }
+
+    @Override
+    public void log(String text) {
 
     }
 }

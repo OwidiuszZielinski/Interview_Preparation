@@ -29,4 +29,9 @@ public class Person extends TheCityOfHero{
     public String toString() {
         return this.name + "\n" + this.age + "\n" + super.city + "\n";
     }
+
+    @Override
+    protected void printCity() {
+        System.out.println("SECOND CLASS " + city);
+    }
 }

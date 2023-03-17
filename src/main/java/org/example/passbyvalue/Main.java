@@ -28,6 +28,13 @@ public class Main {
 
         System.out.println("AFTER: " + primitive);
 
+        System.out.println("BEFORE: " + animal.age);
+
+        foo(animal);
+
+        System.out.println("AFTER: " + animal.age);
+
+
     }
 
     //Method 1
@@ -47,5 +54,9 @@ public class Main {
     //Method 4
     private static void changeString(String x) {
         x = "Ela";
+    }
+
+    private static void foo(Animal animal){
+        animal.setAge(20);
     }
 }

@@ -1,6 +1,6 @@
 package org.example.inheritance;
 
-public class TheCityOfHero {
+public abstract class TheCityOfHero {
     protected String city;
 
     public String getCity() {
@@ -20,6 +20,9 @@ public class TheCityOfHero {
 
     public String toString() {
         return this.city;
+    }
+    protected void printCity(){
+        System.out.println("FIRST CLASS " + city);
     }
 
 

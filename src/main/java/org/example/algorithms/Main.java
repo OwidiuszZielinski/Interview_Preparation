@@ -5,6 +5,8 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println(Arrays.toString(sorter(new int[]{ 22, 44, 55, 6, 21, 4521, 421, 1 })));
+
         //1
         List<Integer> list = Arrays.asList(1 ,2 ,3 ,4 ,5 ,6);
         sortArrays(list ,new LinkedList<>(list));

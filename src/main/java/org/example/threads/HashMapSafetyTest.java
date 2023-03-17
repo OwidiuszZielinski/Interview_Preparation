@@ -5,20 +5,21 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class HashMapSafetyTest {
     public static void main(String[] args) throws InterruptedException {
+
         ConcurrentHashMap<Integer, String> synchronizedNumbers = new ConcurrentHashMap<>();
-        ArrayList<Integer> vector = new ArrayList<>();
-        Thread writer = new Thread(() -> addPositiveNumbers(vector));
+        ArrayList<Integer> array = new ArrayList<>();
+        Thread writer = new Thread(() -> addPositiveNumbers(synchronizedNumbers));
         writer.start();
         Queue<Integer> queue = new LinkedList<>();
         queue.offer(5);
         queue.offer(4);
         System.out.println(queue);
 
-        addNegativeNumbers(vector); // add negative numbers from the main thread
+        addNegativeNumbers(array); // add negative numbers from the main thread
 
         writer.join(); // wait for the writer thread
 
-        System.out.println(vector.size()); // the size is always 200_000
+        System.out.println(array.size()); // the size is always 200_000
     }
     private static void addPositiveNumbers(ArrayList<Integer> target) {
         for (int i = 0; i < 100_000; i++) {

@@ -5,6 +5,9 @@ import java.util.Comparator;
 public class Animal  {
     public int age;
 
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public static Comparator<Animal> myComparator= new Comparator<Animal>() {
         @Override
@@ -18,5 +21,9 @@ public class Animal  {
     }
 
     public Animal() {
+    }
+
+    public Animal(int age) {
+        this.age = age;
     }
 }

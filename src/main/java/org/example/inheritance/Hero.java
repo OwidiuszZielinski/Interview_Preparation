@@ -36,4 +36,9 @@ public class Hero extends Person {
 
         return super.toString() + behaviour;
     }
+
+    @Override
+    protected void printCity() {
+        System.out.println("THE LAST CLASS : " + city);
+    }
 }

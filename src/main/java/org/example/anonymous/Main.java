@@ -5,6 +5,8 @@ public class Main {
     public static void main(String[] args) {
 
 
+
+
         Anon anon = new Anon() {
             @Override
             public void outer() {
